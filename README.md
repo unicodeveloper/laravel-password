@@ -54,18 +54,18 @@ protected function validator(array $data)
 }
 ```
 
-Results happen like so:
+Error shows on the page like so:
 
-<img width="1101" alt="screen shot 2016-07-02 at 1 10 22 pm" src="https://cloud.githubusercontent.com/assets/2946769/16540466/be96cd5c-405d-11e6-9412-35a89da03edd.png">
+<img width="1093" alt="screen shot 2016-07-02 at 2 12 14 pm" src="https://cloud.githubusercontent.com/assets/2946769/16540503/103e0390-405f-11e6-9c4c-5d02dc1ce7ec.png">
 
 <img width="1095" alt="screen shot 2016-07-02 at 1 22 45 pm" src="https://cloud.githubusercontent.com/assets/2946769/16540468/c6bd71f2-405d-11e6-8f34-d3a9b1b27e77.png">
 
 By default, the error message returned is `This password is just too common. Please try another!`.
 
-You can customize the error message by opening `resources/lang/en/validation.php` and adding it like so:
+You can customize the error message by opening `resources/lang/en/validation.php` and adding to the array like so:
 
 ```php
-  'dumbpwd'              => 'You are using a dumb password abeg',
+  'dumbpwd' => 'You are using a dumb password abeg',
 ```
 
 ## Change log
@@ -75,6 +75,10 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ## Contributing
 
 Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
+
+## Inspiration
+
+* [Eugene Mutai](https://github.com/kn9ts/dumb-passwords)
 
 ## How can I thank you?
 
