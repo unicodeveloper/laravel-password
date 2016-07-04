@@ -5,7 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/unicodeveloper/laravel-password.svg?style=flat-square)](https://scrutinizer-ci.com/g/unicodeveloper/laravel-password)
 [![Total Downloads](https://img.shields.io/packagist/dt/unicodeveloper/laravel-password.svg?style=flat-square)](https://packagist.org/packages/unicodeveloper/laravel-password)
 
-> #### Guard your users from security problems such as being hacked that start by having dumb passwords
+> #### Guard your users from security problems by preventing them from having dumb passwords
 
 ### Introduction
 
