@@ -42,7 +42,7 @@ class DumbPasswordServiceProvider extends ServiceProvider
 
        Validator::extend('dumbpwd', function($attribute, $value, $parameters, $validator) use ($data) {
             return !$data->has($value);
-       }, $message);
+       }, $this->message);
     }
 
     /**
