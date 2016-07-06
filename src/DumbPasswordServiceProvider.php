@@ -25,6 +25,13 @@ class DumbPasswordServiceProvider extends ServiceProvider
     protected $defer = false;
 
     /**
+     * default error message
+     *
+     * @var string
+     */
+    protected $message = 'This password is just too common. Please try another!';
+
+    /**
     * Publishes all the config file this package needs to function
     */
     public function boot()
@@ -35,7 +42,7 @@ class DumbPasswordServiceProvider extends ServiceProvider
 
        Validator::extend('dumbpwd', function($attribute, $value, $parameters, $validator) use ($data) {
             return !$data->has($value);
-       }, 'This password is just too common. Please try another!');
+       }, $message);
     }
 
     /**
