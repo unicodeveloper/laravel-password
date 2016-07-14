@@ -37,11 +37,10 @@ class DumbPasswordServiceProvider extends ServiceProvider
     public function boot()
     {
         $path = realpath(__DIR__.'/../resources/config/passwordlist.txt');
-        $dumbPasswords = collect(explode("\n", file_get_contents($path)));
-        $data = $dumbPasswords->flip();
+        $data = $this->generateDictionary($path);
 
        Validator::extend('dumbpwd', function($attribute, $value, $parameters, $validator) use ($data) {
-            return !$data->has($value);
+            return !array_key_exists($value, $data);
        }, $this->message);
     }
 
@@ -60,5 +59,28 @@ class DumbPasswordServiceProvider extends ServiceProvider
     public function provides()
     {
         return ['laravel-password'];
+    }
+
+    /**
+     * Generates a dictionary from the file referenced by the path specified
+     *
+     * @param $path
+     *
+     * @return array
+     */
+    private function generateDictionary($path)
+    {
+        $dictionary = [];
+
+        $handle = fopen($path, "r");
+        if ($handle) {
+            while (($line = fgets($handle)) !== false) {
+                $dictionary[trim($line)] = true;
+            }
+
+            fclose($handle);
+        }
+
+        return $dictionary;
     }
 }
