@@ -16,6 +16,13 @@ use Validator;
 
 class DumbPasswordServiceProvider extends ServiceProvider
 {
+    /*
+    * Indicates if loading of the provider is deferred.
+    *
+    * @var bool
+    */
+    protected $defer = true;
+    
     /**
      * Default error message.
      *
