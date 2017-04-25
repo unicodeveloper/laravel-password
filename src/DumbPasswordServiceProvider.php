@@ -29,7 +29,7 @@ class DumbPasswordServiceProvider extends ServiceProvider
     public function boot()
     {
         $path = realpath(__DIR__.'/../resources/config/passwordlist.txt');
-        $dumbPasswords = collect(explode("\n", file_get_contents($path)));
+        $data = collect(explode("\n", file_get_contents($path)));
 
         Validator::extend('dumbpwd', function ($attribute, $value, $parameters, $validator) use ($data) {
             return !$data->contains($value);
