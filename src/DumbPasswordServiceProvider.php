@@ -22,7 +22,7 @@ class DumbPasswordServiceProvider extends ServiceProvider
     * @var bool
     */
     protected $defer = true;
-    
+
     /**
      * Default error message.
      *
