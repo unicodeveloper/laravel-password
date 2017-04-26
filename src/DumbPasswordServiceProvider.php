@@ -36,7 +36,7 @@ class DumbPasswordServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-         Validator::extend('dumbpwd', function ($attribute, $value, $parameters, $validator) {
+        Validator::extend('dumbpwd', function ($attribute, $value, $parameters, $validator) {
             $path = realpath(__DIR__ . '/../resources/config/passwordlist.txt');
             $cache_key = md5_file($path);
             $data = Cache::rememberForever('dumbpwd_list_' . $cache_key, function () use ($path) {
