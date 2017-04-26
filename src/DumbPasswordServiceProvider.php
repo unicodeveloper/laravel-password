@@ -12,6 +12,7 @@
 namespace Unicodeveloper\DumbPassword;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Cache;
 use Validator;
 
 class DumbPasswordServiceProvider extends ServiceProvider
