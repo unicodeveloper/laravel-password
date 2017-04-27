@@ -9,3 +9,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Removed the flip method
 - Now uses the collection `contains` method directly.
 - Caching Support
+
+
+## 2017-04-27
+
+- Switch back to a non-defered service provider 
