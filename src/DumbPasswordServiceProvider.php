@@ -42,6 +42,7 @@ class DumbPasswordServiceProvider extends ServiceProvider
             $data = Cache::rememberForever('dumbpwd_list_' . $cache_key, function () use ($path) {
                 return collect(explode("\n", file_get_contents($path)));
             });
+            $value = strtolower($value); // make sure a combination of upper and lower cases doesn't pass
             return !$data->contains($value);
         }, $this->message);
     }
