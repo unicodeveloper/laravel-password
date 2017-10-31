@@ -70,7 +70,7 @@ You can customize the error message by opening `resources/lang/en/validation.php
 
 ## Change log
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
