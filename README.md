@@ -28,10 +28,12 @@ To get the latest version of Laravel Password, simply add the following line to 
 
 You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
 
-Once Laravel Password is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
+- If you're on Laravel 5.5 or above, that's all you need to do! Check out the usage examples below.
+- If you're on Laravel < 5.5, you'll need to register the service provider. Open up `config/app.php` and add the following to the `providers` array:
 
-* `Unicodeveloper\DumbPassword\DumbPasswordServiceProvider::class`
-
+```php
+Unicodeveloper\DumbPassword\DumbPasswordServiceProvider::class
+```
 
 ## Usage
 
