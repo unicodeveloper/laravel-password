@@ -58,8 +58,6 @@ protected function validator(array $data)
 
 Error shows on the page like so:
 
-<img width="1093" alt="screen shot 2016-07-02 at 2 12 14 pm" src="https://cloud.githubusercontent.com/assets/2946769/16540503/103e0390-405f-11e6-9c4c-5d02dc1ce7ec.png">
-
 <img width="1095" alt="screen shot 2016-07-02 at 1 22 45 pm" src="https://cloud.githubusercontent.com/assets/2946769/16540468/c6bd71f2-405d-11e6-8f34-d3a9b1b27e77.png">
 
 By default, the error message returned is `This password is just too common. Please try another!`.
@@ -69,6 +67,8 @@ You can customize the error message by opening `resources/lang/en/validation.php
 ```php
   'dumbpwd' => 'You are using a dumb password abeg',
 ```
+
+<img width="1093" alt="screen shot 2016-07-02 at 2 12 14 pm" src="https://cloud.githubusercontent.com/assets/2946769/16540503/103e0390-405f-11e6-9c4c-5d02dc1ce7ec.png">
 
 ## Change log
 
