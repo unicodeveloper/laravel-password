@@ -40,9 +40,12 @@ class DumbPasswordServiceProvider extends ServiceProvider
             $path = realpath(__DIR__ . '/../resources/config/passwordlist.txt');
             $cache_key = md5_file($path);
             $data = Cache::rememberForever('dumbpwd_list_' . $cache_key, function () use ($path) {
-                return collect(explode("\n", file_get_contents($path)));
+                return collect(explode("\n", file_get_contents($path)))
+                    ->map(function ($password) {
+                            return strtolower($password);
+                    });
             });
-            return !$data->contains($value);
+            return !$data->contains(strtolower($value));
         }, $this->message);
     }
 
@@ -56,7 +59,7 @@ class DumbPasswordServiceProvider extends ServiceProvider
 
     /**
      * Get the services provided by the provider.
-     * 
+     *
      * @return array
      */
     public function provides()
