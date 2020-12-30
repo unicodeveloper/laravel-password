@@ -4,6 +4,11 @@ All Notable changes to `laravel-password` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 2020-12-30
+
+- Make passwords case insensitive.
+- Support PHP 8
+
 ## 2017-04-26
 
 - Removed the flip method
